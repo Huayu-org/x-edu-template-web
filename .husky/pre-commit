@@ -1,0 +1,3 @@
+#!/bin/sh
+npx eslint --fix ./src
+npx prettier --write . --log-level=error
