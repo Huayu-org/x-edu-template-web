@@ -1,12 +1,12 @@
 import { ThemeContext } from '@/context/themeContext'
 import { getLocalTheme, setLocalTheme } from '@/util/theme'
 import { ConfigProvider, theme as antdTheme } from 'antd'
-import { useEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 
 const ThemeProvider = ({ children }) => {
 	const [theme, setTheme] = useState(getLocalTheme())
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if (theme === 'dark') {
 			document.documentElement.classList.add('dark')
 		} else {

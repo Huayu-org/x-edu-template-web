@@ -31,7 +31,7 @@ export default [
 			...reactHooks.configs.recommended.rules,
 			...prettierConfig.rules,
 			'prettier/prettier': 'error',
-			'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+			'no-unused-vars': ['error', { varsIgnorePattern: '^[_A-Z]', caughtErrors: 'none' }],
 			'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
 		},
 	},
